@@ -22,7 +22,7 @@ const About = () => {
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
 							Rochester Institute of Technology
 						</LinkPreview>{" "}
-						in Dubai, passionate about learning cybersecurity and computer science. But my interests don't stop there—I also love{" "}
+						in Dubai, passionate about learning cybersecurity and computer science. But my interests don&apos;t stop there—I also love{" "}
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
 							robotics
 						</LinkPreview>

@@ -24,9 +24,9 @@ export default function SignupFormDemo() {
 			<div className='flex flex-col lg:flex-row gap-12'>
 				<div className='flex flex-col gap-6 text-lg'>
 					<div className='flex flex-col gap-4'>
-						<p>I'd love to hear from you! Whether you're looking to collaborate on a project, need a web development solution, or just want to have a chat!</p>
+						<p>I&apos;d love to hear from you! Whether you&apos;re looking to collaborate on a project, need a web development solution, or just want to have a chat!</p>
 						<hr className='my-4 border-gray-500 opacity-60 w-1/2' />
-						<p>Drop me an email anytime, and I'll get back to you as soon as possible.</p>
+						<p>Drop me an email anytime, and I&apos;ll get back to you as soon as possible.</p>
 						<span className='flex flex-row gap-4 items-center underline bold'>
 							<SocialsButton href='mailto:tayyabsajidq41321@gmail.com' className='pointer-events-auto hover:-translate-y-1 transition-transform' label='' icon={<IoMailOpenOutline className='text-red-600' />} position='left' />
 							tayyabsajidq41321@gmail.com
@@ -50,7 +50,7 @@ export default function SignupFormDemo() {
 				</div>
 				<div className='max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black-100'>
 					<h2 className='font-bold text-xl text-neutral-800 dark:text-neutral-200'>Quick Message</h2>
-					<p className='text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300'>You can also just send me a quick message and I'll get back to you on you mail.</p>
+					<p className='text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300'>You can also just send me a quick message and I&apos;ll get back to you on you mail.</p>
 
 					<form className='my-8' onSubmit={handleSubmit}>
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>
