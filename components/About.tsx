@@ -16,9 +16,9 @@ const About = () => {
 			<Heading title='About' titleSpan='Me' />
 			<div className='relative flex flex-col lg:flex-row justify-between items-center gap-24 mx-auto'>
 				<div className='sm:max-w-2xl flex flex-col gap-2 justify-center items-start'>
-					<h3 className='text-3xl font-bold tracking-tight sm:text-4xl'>Hi, I'm Tayyab Sajid</h3>
+					<h3 className='text-3xl font-bold tracking-tight sm:text-4xl'>Hi, I&apos;m Tayyab Sajid</h3>
 					<p className='mt-4 text-lg'>
-						I'm a third-year cybersecurity student at{" "}
+						I&apos;m a third-year cybersecurity student at{" "}
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
 							Rochester Institute of Technology
 						</LinkPreview>{" "}
@@ -37,13 +37,13 @@ const About = () => {
 						.
 					</p>
 					<p className='mt-4 text-lg'>
-						I enjoy problem-solving and critical thinking, and I aim to be skilled in various STEM subjects. I've won several{" "}
+						I enjoy problem-solving and critical thinking, and I aim to be skilled in various STEM subjects. I&apos;ve won several{" "}
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
 							competitions
 						</LinkPreview>{" "}
 						in computer science, robotics, and AI, but I keep trying to be better. Besides academics, I love picking up new skills like solving{" "}
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
-							Rubik's cubes
+							Rubik&apos;s cubes
 						</LinkPreview>{" "}
 						and{" "}
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
@@ -51,7 +51,7 @@ const About = () => {
 						</LinkPreview>{" "}
 						.
 					</p>
-					<p className='mt-4 text-lg'>I'm an emotional person who tends to overthink things and deal with unique challenges, but I always try my best. I like to mix my different interests and skills to do something cool and meaningful.</p>
+					<p className='mt-4 text-lg'>I&apos;m an emotional person who tends to overthink things and deal with unique challenges, but I always try my best. I like to mix my different interests and skills to do something cool and meaningful.</p>
 					<div className='flex flex-row gap-6'>
 						<Link href={"#"} className='mt-4'>
 							<HoverBorderGradient containerClassName='rounded-full' as='button' className='dark:bg-black-100 bg-white text-black dark:text-white flex items-center space-x-2'>

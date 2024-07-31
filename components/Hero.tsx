@@ -22,7 +22,7 @@ const Hero = () => {
 
 			<div className='flex flex-col md:flex-row text-center md:text-left justify-around items-center relative my-10 z-10 gap-10 sm:px-10 px-5'>
 				<div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-centers items-center text-center gap-4'>
-					<h2 className='tracking-widest text-xl text-blue-100 max-w-sm'>Hello, I'm</h2>
+					<h2 className='tracking-widest text-xl text-blue-100 max-w-sm'>Hello, I&apos;m</h2>
 					<TextGenerateEffect className='text-6xl lg:text-8xl' words='Tayyab Sajid' />
 					<h1 className='tracking-widest text-xl text-blue-100 max-w-sm'>
 						I am a determined and passionate
