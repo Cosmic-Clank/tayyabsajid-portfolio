@@ -23,30 +23,30 @@ const About = () => {
 							Rochester Institute of Technology
 						</LinkPreview>{" "}
 						in Dubai, passionate about learning cybersecurity and computer science. But my interests don&apos;t stop there—I also love{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://github.com/Cosmic-Clank/emiratesroboticscompetition' className='font-bold underline'>
 							robotics
 						</LinkPreview>
 						,{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://github.com/Cosmic-Clank/emiratesroboticscompetition' className='font-bold underline'>
 							artificial intelligence
 						</LinkPreview>
 						, and{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://tayyabsajid.me' className='font-bold underline'>
 							web development
 						</LinkPreview>
 						.
 					</p>
 					<p className='mt-4 text-lg'>
 						I enjoy problem-solving and critical thinking, and I aim to be skilled in various STEM subjects. I&apos;ve won several{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://tayyabsajid.me' className='font-bold underline'>
 							competitions
 						</LinkPreview>{" "}
 						in computer science, robotics, and AI, but I keep trying to be better. Besides academics, I love picking up new skills like solving{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://en.wikipedia.org/wiki/Rubik%27s_Cube' className='font-bold underline'>
 							Rubik&apos;s cubes
 						</LinkPreview>{" "}
 						and{" "}
-						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold underline'>
+						<LinkPreview url='https://en.wikipedia.org/wiki/Pen_spinning' className='font-bold underline'>
 							pen spinning
 						</LinkPreview>{" "}
 						.
