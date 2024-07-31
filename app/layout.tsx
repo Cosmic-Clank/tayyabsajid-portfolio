@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export const metadata = {
 		description: "Welcome to the portfolio of Tayyab Sajid, a versatile developer specializing in cybersecurity, web development, AI, machine learning, and robotics. Explore my projects and get in touch to collaborate.",
 		images: [
 			{
-				url: "/og-image.jpg",
+				url: "https://tayyabsajid.me/og-image.jpg",
 				width: 1200,
 				height: 630,
 				alt: "Tayyab Sajid - Portfolio",
@@ -51,6 +52,7 @@ export default function RootLayout({
 				<ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
+				<SpeedInsights />
 			</body>
 		</html>
 	);
