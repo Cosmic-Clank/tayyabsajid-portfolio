@@ -54,7 +54,7 @@ const About = () => {
 					<div className='flex flex-row gap-6'>
 						<Link href={"#contact"} className='mt-4'>
 							<HoverBorderGradient containerClassName='rounded-full' as='button' className='dark:bg-black-100 bg-white text-black dark:text-white flex items-center space-x-2'>
-								Connect with me!
+								Contact Me!
 								<span>
 									<BsBoxArrowUpRight className='ml-3' size={"18"} />
 								</span>
@@ -62,7 +62,7 @@ const About = () => {
 						</Link>
 						<Link href={"/docs/Tayyab Sajid CV.pdf"} className='mt-4'>
 							<HoverBorderGradient containerClassName='rounded-full' as='button' className='dark:bg-black-100 bg-white text-black dark:text-white flex items-center space-x-2'>
-								Download my CV
+								View CV
 								<span>
 									<CiSaveDown2 className='ml-3' size={"24"} />
 								</span>
