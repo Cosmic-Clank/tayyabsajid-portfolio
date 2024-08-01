@@ -3,7 +3,7 @@ import React from "react";
 import { FloatingNav } from "./ui/FloatingNavbar";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiUser } from "react-icons/fi";
-import { FiPhoneCall } from "react-icons/fi";
+import { MdHomeRepairService } from "react-icons/md";
 
 export default function FloatingNavDemo() {
 	const navItems = [
@@ -20,7 +20,7 @@ export default function FloatingNavDemo() {
 		{
 			name: "Services",
 			link: "#services",
-			icon: <FiPhoneCall className='h-4 w-4 text-neutral-500 dark:text-white' />,
+			icon: <MdHomeRepairService className='h-4 w-4 text-neutral-500 dark:text-white' />,
 		},
 	];
 	return (

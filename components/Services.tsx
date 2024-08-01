@@ -28,9 +28,9 @@ const Services = () => {
 								</h2>
 								<h2 className='font-normal my-4 text-sm text-zinc-400'>{service.description}</h2>
 								<div className='flex flex-col items-start mt-10'>
-									<span className='flex flex-row'>
+									<span className='flex flex-row flex-wrap'>
 										{service.icons.map((icon, index) => (
-											<div key={index} className='w-8 h-8 border border-zinc-500 bg-black-100 rounded-full p-2 flex justify-center items-center' style={{ transform: `translateX(-${5 * index * 2}px)` }}>
+											<div key={index} className='w-7 h-7 border border-zinc-500 bg-black-100 rounded-full p-1 flex justify-center items-center' style={{ transform: `translateX(-${5 * index * 2}px)` }}>
 												<Image src={icon} width={"1000"} height={"1000"} alt='company logo' />
 											</div>
 										))}
@@ -72,7 +72,7 @@ const services = [
 		title: "Fullstack Development",
 		description: "Offering complete web solutions by integrating both frontend and backend technologies, ensuring seamless and scalable web applications.",
 		image: "/images/services/fullstack.jpg",
-		icons: ["/images/logos/node-js.svg", "/images/logos/react-js.svg", "/images/logos/next-js.svg", "/images/logos/typescript.svg", "/images/logos/javascript.svg", "/images/logos/tailwindcss.svg", "/images/logos/vercel.svg", "/images/logos/html.svg", "/images/logos/css.svg", "/images/logos/express-js.svg", "/images/logos/mongodb.svg", "/images/logos/postgresql.svg", "/images/logos/django.svg"],
+		icons: ["/images/logos/react-js.svg", "/images/logos/next-js.svg", "/images/logos/typescript.svg", "/images/logos/javascript.svg", "/images/logos/tailwindcss.svg", "/images/logos/express-js.svg", "/images/logos/mongodb.svg", "/images/logos/postgresql.svg", "/images/logos/django.svg"],
 		logo: <CiGlobe size={25} />,
 	},
 	{
