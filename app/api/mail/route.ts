@@ -3,6 +3,7 @@ import { type NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
 	const searchParams = request.nextUrl.searchParams;
+	console.log(request.nextUrl);
 	const name = searchParams.get("name");
 	const email = searchParams.get("email");
 	const message = searchParams.get("message");
@@ -10,7 +11,7 @@ export async function GET(request: NextRequest) {
 	try {
 		const result = await sendMail({
 			from: email || "",
-			subject: "EMAIL INQUIRY FROM WEBSITE",
+			subject: "WEBSITE ENQUIRY FROM " + name,
 			body: `
             <html>
                 <head>
@@ -70,8 +71,8 @@ export async function GET(request: NextRequest) {
             </html>
         `,
 		});
-		return Response.redirect("/mail/success");
+		return Response.redirect(new URL("/mail/success", request.nextUrl));
 	} catch (error) {
-		return Response.redirect("/mail/fail");
+		return Response.redirect(new URL("/mail/error", request.nextUrl));
 	}
 }
