@@ -74,6 +74,6 @@ export async function GET(request: NextRequest) {
 		return Response.redirect(new URL("/mail/success", request.nextUrl));
 	} catch (error: any) {
 		// return Response.redirect(new URL("/mail/fail", request.nextUrl));
-		return { message: error.message };
+		return Response.json({ message: error.message });
 	}
 }
