@@ -14,9 +14,8 @@ import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 import { IoMailOpenOutline } from "react-icons/io5";
 
 export default function SignupFormDemo() {
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log("Form submitted");
 	};
 	return (
 		<SectionContainer id='contact'>
@@ -48,11 +47,11 @@ export default function SignupFormDemo() {
 						<SocialsButton href='mailto:tayyabsajidq41321@gmail.com' className='pointer-events-auto hover:-translate-y-1 transition-transform' label='' icon={<IoMailOpenOutline className='text-red-600' />} position='left' />
 					</div>
 				</div>
-				<div className='max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black'>
+				<div className='max-w-md w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black'>
 					<h2 className='font-bold text-xl text-neutral-800 dark:text-neutral-200'>Quick Message</h2>
 					<p className='text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300'>You can also just send me a quick message and I&apos;ll get back to you on you mail.</p>
 
-					<form className='my-8' onSubmit={handleSubmit}>
+					<form action={"/api/mail"} method='GET' className='my-8'>
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>
 							<LabelInputContainer>
 								<Label htmlFor='firstname'>
@@ -61,7 +60,7 @@ export default function SignupFormDemo() {
 										Name
 									</span>
 								</Label>
-								<Input id='firstname' placeholder='Wade Wilson' type='text' />
+								<Input required id='firstname' placeholder='Wade Wilson' type='text' name='name' />
 							</LabelInputContainer>
 						</div>
 						<LabelInputContainer className='mb-4'>
@@ -71,7 +70,7 @@ export default function SignupFormDemo() {
 									Email
 								</span>
 							</Label>
-							<Input id='email' placeholder='friendlyperson@bestmail.com' type='email' />
+							<Input required id='email' placeholder='friendlyperson@bestmail.com' type='email' name='email' />
 						</LabelInputContainer>
 
 						<LabelInputContainer className='mb-8'>
@@ -81,7 +80,7 @@ export default function SignupFormDemo() {
 									Message
 								</span>
 							</Label>
-							<Textarea id='message' placeholder='Hello, I would like to just sit and have a talk with you :)' />
+							<Textarea required id='message' placeholder='Hello, I would like to just sit and have a talk with you :)' name='message' />
 						</LabelInputContainer>
 
 						<button className='bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]' type='submit'>
