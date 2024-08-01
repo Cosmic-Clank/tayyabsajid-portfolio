@@ -72,7 +72,8 @@ export async function GET(request: NextRequest) {
         `,
 		});
 		return Response.redirect(new URL("/mail/success", request.nextUrl));
-	} catch (error) {
-		return Response.redirect(new URL("/mail/error", request.nextUrl));
+	} catch (error: any) {
+		// return Response.redirect(new URL("/mail/fail", request.nextUrl));
+		return { message: error.message };
 	}
 }
