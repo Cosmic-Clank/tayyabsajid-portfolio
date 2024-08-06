@@ -1,44 +1,55 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import PersonalInfo from "@/data/PersonalInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Tayyab Sajid - Portfolio",
-	description: "Welcome to the portfolio of Tayyab Sajid, a versatile developer specializing in cybersecurity, web development, AI, machine learning, and robotics. Explore my projects and get in touch to collaborate.",
-	keywords: "Tayyab Sajid, portfolio, cybersecurity, web development, AI, machine learning, robotics, full-stack development, software solutions, Python, JavaScript",
-	author: "Tayyab Sajid",
-	canonical: "https://tayyabsajid.me",
+	metadataBase: new URL(PersonalInfo.websiteUrl),
+	title: {
+		template: "%s | Tayyab Sajid",
+		default: "Tayyab Sajid | Portfolio",
+	},
+	description: "Explore the portfolio of Tayyab Sajid, a cybersecurity student at Rochester Institute of Technology (RIT) Dubai, and a skilled full-stack developer. Specializing in cybersecurity, web development, AI, machine learning, and robotics, Tayyab showcases a diverse range of projects and expertise. Discover innovative solutions, cutting-edge technologies, and how Tayyab is shaping the future of tech. Connect to collaborate or learn more about the exciting work happening at the intersection of technology and security.",
+	generator: "Next.js",
+	applicationName: "Tayyab Sajid Portfolio",
+	referrer: "origin-when-cross-origin",
+	keywords: ["Tayyab Sajid", "Tayyab Sajid portfolio", "cybersecurity student", "RIT Dubai student", "Rochester Institute of Technology Dubai", "cybersecurity expert", "full-stack developer", "web development", "AI and machine learning", "robotics engineer", "software solutions", "Python programming", "JavaScript developer", "machine learning projects", "cybersecurity solutions", "web application development", "AI research and development", "robotics technology", "IT consultant", "software engineer", "technology expert", "technology portfolio", "software development projects", "tech innovations", "programming skills", "software design and architecture", "data science and analytics", "IT project management", "tech freelancer", "developer portfolio"],
+	authors: [{ name: "Tayyab Sajid", url: "/" }],
+	creator: "Tayyab Sajid",
+	publisher: "Tayyab Sajid",
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
 	openGraph: {
-		type: "website",
+		title: {
+			template: "%s | Tayyab Sajid",
+			default: "Tayyab Sajid | Portfolio",
+		},
+		description: "Explore Tayyab Sajid's portfolio showcasing expertise in cybersecurity, web development, AI, and more. See innovative projects and connect for collaboration.",
+		url: "/",
+		siteName: "Next.js",
 		locale: "en_US",
-		url: "https://tayyabsajid.me",
-		site_name: "Tayyab Sajid - Portfolio",
-		title: "Tayyab Sajid - Portfolio",
-		description: "Welcome to the portfolio of Tayyab Sajid, a versatile developer specializing in cybersecurity, web development, AI, machine learning, and robotics. Explore my projects and get in touch to collaborate.",
-		images: [
-			{
-				url: "https://tayyabsajid.me/og-image.jpg",
-				width: 1200,
-				height: 630,
-				alt: "Tayyab Sajid - Portfolio",
-			},
-		],
+		type: "website",
 	},
-	icons: {
-		icon: "/favicon.ico",
-		appleTouchIcon: "/apple-touch-icon.png",
-		favicon32: "/favicon-32x32.png",
-		favicon16: "/favicon-16x16.png",
-		manifest: "/site.webmanifest",
-		maskIcon: "/safari-pinned-tab.svg",
+	robots: {
+		index: true, // Allows search engines to index the page
+		follow: true, // Allows search engines to follow links on the page
+		nocache: false, // Allows search engines to cache the page
+		googleBot: {
+			"index": true, // Allows Googlebot to index the page
+			"follow": true, // Allows Googlebot to follow links on the page
+			"noimageindex": false, // Allows Googlebot to index images
+			"max-video-preview": -1, // No limit on video preview length
+			"max-image-preview": "large", // Allows large image previews
+			"max-snippet": -1, // No limit on snippet length
+		},
 	},
-	manifest: "/site.webmanifest",
-	robots: "index, follow",
-	metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
 };
 
 export default function RootLayout({
@@ -49,9 +60,10 @@ export default function RootLayout({
 	return (
 		<html lang='en' className='scroll-smooth'>
 			<body className={inter.className}>
-				<ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
+				<ThemeProvider attribute='class' defaultTheme='dark' disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
+				<Analytics />
 				<SpeedInsights />
 			</body>
 		</html>

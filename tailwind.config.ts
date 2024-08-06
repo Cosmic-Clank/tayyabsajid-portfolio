@@ -77,6 +77,7 @@ const config: Config = {
 					DEFAULT: "#000",
 					100: "#000319",
 				},
+				textAccent: { DEFAULT: "#7dd3fc" },
 			},
 		},
 	},
