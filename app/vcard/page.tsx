@@ -22,10 +22,10 @@ const page = () => {
 							<Image src='/images/profile.jpg' alt='Profile Picture' width={200} height={200} />
 						</Link>
 						<div className='flex gap-6'>
-							<Link href='/'>
+							<Link href={"#qrcode"}>
 								<FaShareNodes size={25} />
 							</Link>
-							<Link href='/vCard'>
+							<Link href='#qrcode'>
 								<FaQrcode size={25} />
 							</Link>
 						</div>
@@ -47,7 +47,7 @@ const page = () => {
 
 				<SocialButtons />
 				<ContactForm />
-				<QRCodeSVG value='https://www.linkedin.com/in/tayyabsajid/' includeMargin size={480} className='w-full' imageSettings={{ src: "/images/logos/linkedin.svg", height: 48, width: 48, excavate: true }} />
+				<QRCodeSVG id='qrcode' value='https://www.linkedin.com/in/tayyabsajid/' includeMargin size={480} className='w-full' imageSettings={{ src: "/images/logos/linkedin.svg", height: 48, width: 48, excavate: true }} />
 				<QRCodeSVG value='https://www.instagram.com/cosmic_clank/' includeMargin size={480} className='w-full' imageSettings={{ src: "/images/logos/instagram.svg", height: 48, width: 48, excavate: true }} />
 				<QRCodeSVG value='https://wa.me/+971561831758' includeMargin size={480} className='w-full' imageSettings={{ src: "/images/logos/whatsapp.svg", height: 48, width: 48, excavate: true }} />
 				<QRCodeSVG value='https://github.com/Cosmic-Clank' includeMargin size={480} className='w-full' imageSettings={{ src: "/images/logos/github.svg", height: 48, width: 48, excavate: true }} />
