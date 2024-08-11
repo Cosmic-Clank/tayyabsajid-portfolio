@@ -22,12 +22,12 @@ const page = () => {
 							<Image src='/images/profile.jpg' alt='Profile Picture' width={200} height={200} />
 						</Link>
 						<div className='flex gap-6'>
-							<Link href={"#qrcode"}>
+							<a href='#qrcode'>
 								<FaShareNodes size={25} />
-							</Link>
-							<Link href='#qrcode'>
+							</a>
+							<a href='#qrcode'>
 								<FaQrcode size={25} />
-							</Link>
+							</a>
 						</div>
 					</div>
 					<hr className='mt-12 mx-auto w-3/4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10' />
