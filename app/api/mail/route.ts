@@ -3,11 +3,11 @@ import { type NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
 	const searchParams = request.nextUrl.searchParams;
-	console.log(request.nextUrl);
+	// console.log(request.nextUrl);
 	const name = searchParams.get("name");
 	const email = searchParams.get("email");
 	const message = searchParams.get("message");
-	console.log(request.url);
+	// console.log(request.url);
 	try {
 		const result = await sendMail({
 			from: email || "",
@@ -71,8 +71,9 @@ export async function GET(request: NextRequest) {
             </html>
         `,
 		});
-		return Response.redirect(new URL("/mail/success", request.nextUrl));
+		return Response.json({ message: "Email sent successfully, I will reply to you shortly!" }, { status: 200 });
 	} catch (error: any) {
-		return Response.redirect(new URL("/mail/fail", request.nextUrl));
+		console.log(error);
+		return Response.json({ message: "Failed to send email, Please check your network connection!" }, { status: 500 });
 	}
 }

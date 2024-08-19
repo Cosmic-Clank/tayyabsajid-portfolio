@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Label } from "@/components/ui/Label";
 import { Input } from "@/components/ui/Input";
@@ -6,23 +8,60 @@ import { Textarea } from "@/components/ui/Textarea";
 import { MdOutlinePerson4 } from "react-icons/md";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { MdMessage } from "react-icons/md";
+import { useToast } from "./use-toast";
 
 const ContactForm = () => {
+	const { toast } = useToast();
+
+	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		const formData = {
+			name: event.currentTarget.fullname.value,
+			email: event.currentTarget.email.value,
+			message: event.currentTarget.message.value,
+		};
+
+		const queryParams = new URLSearchParams(formData).toString();
+		const url = `/api/mail?${queryParams}`;
+
+		fetch(url, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				toast({
+					title: "Mail Status",
+					description: data.message,
+				});
+			})
+			.catch((error) => {
+				toast({
+					title: "Mail Status",
+					description: error,
+				});
+			});
+	};
+
 	return (
 		<div className='max-w-md w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-black bg-opacity-40 backdrop-blur-sm'>
 			<h2 className='font-bold text-xl text-neutral-800 dark:text-neutral-200'>Quick Message</h2>
 			<p className='text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300'>You can also just send me a quick message and I&apos;ll get back to you on you mail.</p>
 
-			<form action={"/api/mail"} method='GET' className='my-8'>
+			<form method='GET' className='my-8' onSubmit={handleSubmit}>
 				<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>
 					<LabelInputContainer>
-						<Label htmlFor='firstname'>
+						<Label htmlFor='fullname'>
 							<span className='flex gap-2 items-center'>
 								<MdOutlinePerson4 size={20} />
-								Name
+								Full Name
 							</span>
 						</Label>
-						<Input required id='firstname' placeholder='Wade Wilson' type='text' name='name' />
+						<Input required id='fullname' placeholder='Wade Wilson' type='text' name='fullname' />
 					</LabelInputContainer>
 				</div>
 				<LabelInputContainer className='mb-4'>
