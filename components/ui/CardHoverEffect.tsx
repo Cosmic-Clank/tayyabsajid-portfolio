@@ -19,13 +19,13 @@ export const HoverEffect = ({
 	let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	return (
-		<div className={cn("grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 py-10", className)}>
+		<div className={cn("grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 py-10 w-full", className)}>
 			{items.map((item, idx) => (
-				<Link href={item?.link} key={item?.link} className='relative group  block p-2 h-full w-full' onMouseEnter={() => setHoveredIndex(idx)} onMouseLeave={() => setHoveredIndex(null)}>
+				<Link href={item?.link} key={item?.link} className='relative group block p-2 h-full w-full' onMouseEnter={() => setHoveredIndex(idx)} onMouseLeave={() => setHoveredIndex(null)}>
 					<AnimatePresence>
 						{hoveredIndex === idx && (
 							<motion.span
-								className='absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl'
+								className='absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl'
 								layoutId='hoverBackground'
 								initial={{ opacity: 0 }}
 								animate={{
@@ -40,8 +40,8 @@ export const HoverEffect = ({
 						)}
 					</AnimatePresence>
 					<Card className='flex flex-col justify-center items-center'>
-						<Image src={item.icon} alt='Logo' width={50} height={50} className='text-center mx-auto' />
-						<CardTitle className='text-center'>{item.title}</CardTitle>
+						<Image src={item.icon} alt='Logo' width={30} height={30} className='text-center mx-auto' />
+						<CardTitle className='text-center text-sm'>{item.title}</CardTitle>
 					</Card>
 				</Link>
 			))}
