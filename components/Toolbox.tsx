@@ -11,7 +11,7 @@ const Toolbox = () => {
 			<Tabs defaultValue='Languages & Version Control' className='w-full flex justify-center items-center flex-col'>
 				<TabsList className='flex-wrap mx-auto bg-[#00000066] h-full border border-[#ffffff33] rounded-xl'>
 					{Object.keys(toolbox).map((key) => (
-						<div className='px-1'>
+						<div key={key} className='px-1'>
 							<TabsTrigger className='hover:bg-[#27272a] rounded-xl pb-1' value={key}>
 								{key}
 							</TabsTrigger>
@@ -19,7 +19,7 @@ const Toolbox = () => {
 					))}
 				</TabsList>
 				{Object.entries(toolbox).map(([key, value]) => (
-					<TabsContent value={key} className='w-full'>
+					<TabsContent key={key} value={key} className='w-full'>
 						<HoverEffect items={value} />
 					</TabsContent>
 				))}
