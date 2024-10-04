@@ -22,34 +22,14 @@ const About = () => {
 						<LinkPreview url='https://www.rit.edu/dubai/' className='font-bold'>
 							Rochester Institute of Technology
 						</LinkPreview>{" "}
-						in Dubai, passionate about learning cybersecurity and computer science. But my interests don&apos;t stop there—I also love{" "}
-						<LinkPreview url='https://github.com/Cosmic-Clank/emiratesroboticscompetition' className='font-bold'>
-							robotics
-						</LinkPreview>
-						,{" "}
-						<LinkPreview url='https://github.com/Cosmic-Clank/emiratesroboticscompetition' className='font-bold'>
-							artificial intelligence
-						</LinkPreview>
-						, and{" "}
-						<LinkPreview url='https://tayyabsajid.me' className='font-bold'>
-							web development
-						</LinkPreview>
-						.
+						in Dubai, passionate about learning cybersecurity and computer science. But my interests don&apos;t stop there—I also love robotics , artificial intelligence , and web development .
 					</p>
 					<p className='mt-4 text-lg'>
 						I enjoy problem-solving and critical thinking, and I aim to be skilled in various STEM subjects. I&apos;ve won several{" "}
-						<LinkPreview url='https://tayyabsajid.me' className='font-bold'>
+						<LinkPreview url='https://www.linkedin.com/in/tayyabsajid/' className='font-bold'>
 							competitions
 						</LinkPreview>{" "}
-						in computer science, robotics, and AI, but I keep trying to be better. Besides academics, I love picking up new skills like solving{" "}
-						<LinkPreview url='https://en.wikipedia.org/wiki/Rubik%27s_Cube' className='font-bold'>
-							Rubik&apos;s cubes
-						</LinkPreview>{" "}
-						and{" "}
-						<LinkPreview url='https://en.wikipedia.org/wiki/Pen_spinning' className='font-bold'>
-							pen spinning
-						</LinkPreview>{" "}
-						.
+						in computer science, robotics, and AI, but I keep trying to be better. Besides academics, I love picking up new skills like solving Rubik&apos;s cubes and pen spinning.
 					</p>
 					<div className='flex flex-row gap-6'>
 						<Link href={"#contact"} className='mt-4'>
